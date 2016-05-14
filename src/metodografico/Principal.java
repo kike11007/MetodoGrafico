@@ -5,6 +5,7 @@
  */
 package metodografico;
 import javax.swing.*;
+import java.util.ArrayList;
 /**
  *
  * @author saul
@@ -410,7 +411,126 @@ public class Principal extends JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String opcion = jComboBox1.getSelectedItem().toString();       
-//        JOptionPane.showMessageDialog(null, opcion);
+        Ecuacion ec_a, ec_b, ec_c, ec_d, ec_e;
+        ArrayList <Ecuacion> ecuaciones = new ArrayList <Ecuacion> ();
+        switch(opcion){
+            case "1":
+                ec_a = new Ecuacion("Restricción ZA", 
+                        Integer.parseInt(fila1_x1.getText()),
+                        Integer.parseInt(fila1_x2.getText()),
+                        fila1_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila1_sol.getText())
+                );
+                ecuaciones.add(ec_a);
+                break;
+            case "2": 
+                ec_a = new Ecuacion("ZA", 
+                        Integer.parseInt(fila1_x1.getText()),
+                        Integer.parseInt(fila1_x2.getText()),
+                        fila1_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila1_sol.getText())
+                );
+                ec_b = new Ecuacion("ZB", 
+                        Integer.parseInt(fila2_x1.getText()),
+                        Integer.parseInt(fila2_x2.getText()),
+                        fila2_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila2_sol.getText())
+                );
+                ecuaciones.add(ec_a);
+                ecuaciones.add(ec_b);
+                break;
+            case "3":
+                ec_a = new Ecuacion("ZA", 
+                        Integer.parseInt(fila1_x1.getText()),
+                        Integer.parseInt(fila1_x2.getText()),
+                        fila1_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila1_sol.getText())
+                );
+                ec_b = new Ecuacion("ZB", 
+                        Integer.parseInt(fila2_x1.getText()),
+                        Integer.parseInt(fila2_x2.getText()),
+                        fila2_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila2_sol.getText())
+                );
+                ec_c = new Ecuacion("Zc", 
+                        Integer.parseInt(fila3_x1.getText()),
+                        Integer.parseInt(fila3_x2.getText()),
+                        fila3_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila3_sol.getText())
+                );
+                ecuaciones.add(ec_a);
+                ecuaciones.add(ec_b);
+                ecuaciones.add(ec_c);
+                break;
+            case "4":
+                ec_a = new Ecuacion("ZA", 
+                        Integer.parseInt(fila1_x1.getText()),
+                        Integer.parseInt(fila1_x2.getText()),
+                        fila1_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila1_sol.getText())
+                );
+                ec_b = new Ecuacion("ZB", 
+                        Integer.parseInt(fila2_x1.getText()),
+                        Integer.parseInt(fila2_x2.getText()),
+                        fila2_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila2_sol.getText())
+                );
+                ec_c = new Ecuacion("Zc", 
+                        Integer.parseInt(fila3_x1.getText()),
+                        Integer.parseInt(fila3_x2.getText()),
+                        fila3_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila3_sol.getText())
+                );
+                ec_d = new Ecuacion("Zc", 
+                        Integer.parseInt(fila4_x1.getText()),
+                        Integer.parseInt(fila4_x2.getText()),
+                        fila4_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila4_sol.getText())
+                );
+                ecuaciones.add(ec_a);
+                ecuaciones.add(ec_b);
+                ecuaciones.add(ec_c);
+                ecuaciones.add(ec_d);
+                break;
+            case "5":
+                ec_a = new Ecuacion("ZA", 
+                        Integer.parseInt(fila1_x1.getText()),
+                        Integer.parseInt(fila1_x2.getText()),
+                        fila1_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila1_sol.getText())
+                );
+                ec_b = new Ecuacion("ZB", 
+                        Integer.parseInt(fila2_x1.getText()),
+                        Integer.parseInt(fila2_x2.getText()),
+                        fila2_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila2_sol.getText())
+                );
+                ec_c = new Ecuacion("Zc", 
+                        Integer.parseInt(fila3_x1.getText()),
+                        Integer.parseInt(fila3_x2.getText()),
+                        fila3_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila3_sol.getText())
+                );
+                ec_d = new Ecuacion("Zc", 
+                        Integer.parseInt(fila4_x1.getText()),
+                        Integer.parseInt(fila4_x2.getText()),
+                        fila4_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila4_sol.getText())
+                );
+                ec_e = new Ecuacion("Zc", 
+                        Integer.parseInt(fila5_x1.getText()),
+                        Integer.parseInt(fila5_x2.getText()),
+                        fila5_select.getSelectedItem().toString(),
+                        Integer.parseInt(fila5_sol.getText())
+                );
+                ecuaciones.add(ec_a);
+                ecuaciones.add(ec_b);
+                ecuaciones.add(ec_c);
+                ecuaciones.add(ec_d);
+                ecuaciones.add(ec_e);
+                break;
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -429,19 +549,16 @@ public class Principal extends JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Principal().setVisible(true);
                 

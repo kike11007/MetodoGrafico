@@ -10,10 +10,10 @@ package metodografico;
  * @author saul
  */
 public class Ecuacion {
-    private String name_restriccion;
-    private int x1, x2, equal, sol;
+    private String name_restriccion, equal;
+    private int x1, x2, sol;
 
-    public Ecuacion(String name, int x1, int x2, int equal, int sol){
+    public Ecuacion(String name, int x1, int x2, String equal, int sol){
         this.name_restriccion = name;
         this.x1 = x1;
         this.x2 = x2;
@@ -44,11 +44,11 @@ public class Ecuacion {
         this.x2 = x2;
     }
 
-    public int getEqual() {
+    public String getEqual() {
         return equal;
     }
 
-    public void setEqual(int equal) {
+    public void setEqual(String equal) {
         this.equal = equal;
     }
 
