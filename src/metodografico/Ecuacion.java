@@ -20,6 +20,11 @@ public class Ecuacion {
         this.equal = equal;
         this.sol = sol;
     }
+    public Ecuacion(String nombre, int x1, int x2){
+        this.name_restriccion = nombre;
+        this.x1 = x1;
+        this.x2 = x2;
+    }
     public String getName_restriccion() {
         return name_restriccion;
     }
