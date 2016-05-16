@@ -73,12 +73,12 @@ public class Principal extends JFrame {
         fila3_sol = new javax.swing.JTextField();
         fila4_sol = new javax.swing.JTextField();
         fila5_sol = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        fun_obj_operacion = new javax.swing.JComboBox<>();
+        fila1_operacion = new javax.swing.JComboBox<>();
+        fila2_operacion = new javax.swing.JComboBox<>();
+        fila3_operacion = new javax.swing.JComboBox<>();
+        fila4_operacion = new javax.swing.JComboBox<>();
+        fila5_operacion = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -178,17 +178,17 @@ public class Principal extends JFrame {
 
         fila5_sol.setEnabled(false);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fun_obj_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fila1_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fila2_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fila3_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fila4_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
+        fila5_operacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -229,12 +229,12 @@ public class Principal extends JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fun_obj_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fila1_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fila2_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fila3_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fila4_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fila5_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -297,12 +297,12 @@ public class Principal extends JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fila2_x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel11)
-                                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(fila2_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fila3_x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel13)
-                                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(fila3_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fila4_x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -315,7 +315,7 @@ public class Principal extends JFrame {
                                             .addComponent(jLabel17)))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(13, 13, 13)
-                                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fila5_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 3, Short.MAX_VALUE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(fila1_select, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -342,7 +342,7 @@ public class Principal extends JFrame {
                             .addComponent(jLabel4)
                             .addComponent(fun_obj_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fun_obj_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -352,7 +352,7 @@ public class Principal extends JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fila1_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(fila1_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fila2_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,7 +365,7 @@ public class Principal extends JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fila4_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14)
-                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fila4_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fila5_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -385,6 +385,10 @@ public class Principal extends JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(263, 263, 263)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(23, 23, 23)
@@ -395,17 +399,12 @@ public class Principal extends JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(217, 217, 217)
-                                .addComponent(jButton1)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -466,7 +465,8 @@ public class Principal extends JFrame {
         ArrayList <Ecuacion> ecuaciones = new ArrayList <Ecuacion> ();
         ec_obj = new Ecuacion("Función objetivo",
                 Integer.parseInt(fun_obj_x1.getText()),
-                Integer.parseInt(fun_obj_x2.getText())
+                Integer.parseInt(fun_obj_x2.getText()),
+                fun_obj_operacion.getSelectedItem().toString()
         );
         ecuaciones.add(ec_obj);
         switch(opcion){
@@ -475,7 +475,8 @@ public class Principal extends JFrame {
                         Integer.parseInt(fila1_x1.getText()),
                         Integer.parseInt(fila1_x2.getText()),
                         fila1_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila1_sol.getText())
+                        Integer.parseInt(fila1_sol.getText()),
+                        fila1_operacion.getSelectedItem().toString()
                 );
                 ecuaciones.add(ec_a);
                 break;
@@ -484,13 +485,15 @@ public class Principal extends JFrame {
                         Integer.parseInt(fila1_x1.getText()),
                         Integer.parseInt(fila1_x2.getText()),
                         fila1_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila1_sol.getText())
+                        Integer.parseInt(fila1_sol.getText()),
+                        fila1_operacion.getSelectedItem().toString()
                 );
                 ec_b = new Ecuacion("ZB", 
                         Integer.parseInt(fila2_x1.getText()),
                         Integer.parseInt(fila2_x2.getText()),
                         fila2_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila2_sol.getText())
+                        Integer.parseInt(fila2_sol.getText()),
+                        fila2_operacion.getSelectedItem().toString()
                 );
                 ecuaciones.add(ec_a);
                 ecuaciones.add(ec_b);
@@ -500,19 +503,22 @@ public class Principal extends JFrame {
                         Integer.parseInt(fila1_x1.getText()),
                         Integer.parseInt(fila1_x2.getText()),
                         fila1_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila1_sol.getText())
+                        Integer.parseInt(fila1_sol.getText()),
+                        fila1_operacion.getSelectedItem().toString()
                 );
                 ec_b = new Ecuacion("ZB", 
                         Integer.parseInt(fila2_x1.getText()),
                         Integer.parseInt(fila2_x2.getText()),
                         fila2_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila2_sol.getText())
+                        Integer.parseInt(fila2_sol.getText()),
+                        fila2_operacion.getSelectedItem().toString()
                 );
                 ec_c = new Ecuacion("Zc", 
                         Integer.parseInt(fila3_x1.getText()),
                         Integer.parseInt(fila3_x2.getText()),
                         fila3_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila3_sol.getText())
+                        Integer.parseInt(fila3_sol.getText()),
+                        fila3_operacion.getSelectedItem().toString()
                 );
                 ecuaciones.add(ec_a);
                 ecuaciones.add(ec_b);
@@ -523,25 +529,29 @@ public class Principal extends JFrame {
                         Integer.parseInt(fila1_x1.getText()),
                         Integer.parseInt(fila1_x2.getText()),
                         fila1_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila1_sol.getText())
+                        Integer.parseInt(fila1_sol.getText()),
+                        fila1_operacion.getSelectedItem().toString()
                 );
                 ec_b = new Ecuacion("ZB", 
                         Integer.parseInt(fila2_x1.getText()),
                         Integer.parseInt(fila2_x2.getText()),
                         fila2_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila2_sol.getText())
+                        Integer.parseInt(fila2_sol.getText()),
+                        fila2_operacion.getSelectedItem().toString()
                 );
                 ec_c = new Ecuacion("Zc", 
                         Integer.parseInt(fila3_x1.getText()),
                         Integer.parseInt(fila3_x2.getText()),
                         fila3_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila3_sol.getText())
+                        Integer.parseInt(fila3_sol.getText()),
+                        fila3_operacion.getSelectedItem().toString()
                 );
                 ec_d = new Ecuacion("Zc", 
                         Integer.parseInt(fila4_x1.getText()),
                         Integer.parseInt(fila4_x2.getText()),
                         fila4_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila4_sol.getText())
+                        Integer.parseInt(fila4_sol.getText()),
+                        fila4_operacion.getSelectedItem().toString()
                 );
                 ecuaciones.add(ec_a);
                 ecuaciones.add(ec_b);
@@ -553,31 +563,36 @@ public class Principal extends JFrame {
                         Integer.parseInt(fila1_x1.getText()),
                         Integer.parseInt(fila1_x2.getText()),
                         fila1_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila1_sol.getText())
+                        Integer.parseInt(fila1_sol.getText()),
+                        fila1_operacion.getSelectedItem().toString()
                 );
                 ec_b = new Ecuacion("ZB", 
                         Integer.parseInt(fila2_x1.getText()),
                         Integer.parseInt(fila2_x2.getText()),
                         fila2_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila2_sol.getText())
+                        Integer.parseInt(fila2_sol.getText()),
+                        fila2_operacion.getSelectedItem().toString()
                 );
-                ec_c = new Ecuacion("Zc", 
+                ec_c = new Ecuacion("ZC", 
                         Integer.parseInt(fila3_x1.getText()),
                         Integer.parseInt(fila3_x2.getText()),
                         fila3_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila3_sol.getText())
+                        Integer.parseInt(fila3_sol.getText()),
+                        fila3_operacion.getSelectedItem().toString()
                 );
-                ec_d = new Ecuacion("Zc", 
+                ec_d = new Ecuacion("ZD", 
                         Integer.parseInt(fila4_x1.getText()),
                         Integer.parseInt(fila4_x2.getText()),
                         fila4_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila4_sol.getText())
+                        Integer.parseInt(fila4_sol.getText()),
+                        fila4_operacion.getSelectedItem().toString()
                 );
-                ec_e = new Ecuacion("Zc", 
+                ec_e = new Ecuacion("ZE", 
                         Integer.parseInt(fila5_x1.getText()),
                         Integer.parseInt(fila5_x2.getText()),
                         fila5_select.getSelectedItem().toString(),
-                        Integer.parseInt(fila5_sol.getText())
+                        Integer.parseInt(fila5_sol.getText()),
+                        fila5_operacion.getSelectedItem().toString()
                 );
                 ecuaciones.add(ec_a);
                 ecuaciones.add(ec_b);
@@ -750,36 +765,36 @@ public class Principal extends JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JComboBox<String> fila1_operacion;
     private javax.swing.JComboBox<String> fila1_select;
     private javax.swing.JTextField fila1_sol;
     private javax.swing.JTextField fila1_x1;
     private javax.swing.JTextField fila1_x2;
+    private javax.swing.JComboBox<String> fila2_operacion;
     private javax.swing.JComboBox<String> fila2_select;
     private javax.swing.JTextField fila2_sol;
     private javax.swing.JTextField fila2_x1;
     private javax.swing.JTextField fila2_x2;
+    private javax.swing.JComboBox<String> fila3_operacion;
     private javax.swing.JComboBox<String> fila3_select;
     private javax.swing.JTextField fila3_sol;
     private javax.swing.JTextField fila3_x1;
     private javax.swing.JTextField fila3_x2;
+    private javax.swing.JComboBox<String> fila4_operacion;
     private javax.swing.JComboBox<String> fila4_select;
     private javax.swing.JTextField fila4_sol;
     private javax.swing.JTextField fila4_x1;
     private javax.swing.JTextField fila4_x2;
+    private javax.swing.JComboBox<String> fila5_operacion;
     private javax.swing.JComboBox<String> fila5_select;
     private javax.swing.JTextField fila5_sol;
     private javax.swing.JTextField fila5_x1;
     private javax.swing.JTextField fila5_x2;
+    private javax.swing.JComboBox<String> fun_obj_operacion;
     private javax.swing.JTextField fun_obj_x1;
     private javax.swing.JTextField fun_obj_x2;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

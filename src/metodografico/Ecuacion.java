@@ -10,20 +10,22 @@ package metodografico;
  * @author saul
  */
 public class Ecuacion {
-    private String name_restriccion, equal;
+    private String name_restriccion, equal, operacion;
     private int x1, x2, sol;
 
-    public Ecuacion(String name, int x1, int x2, String equal, int sol){
+    public Ecuacion(String name, int x1, int x2, String equal, int sol, String operacion){
         this.name_restriccion = name;
         this.x1 = x1;
         this.x2 = x2;
         this.equal = equal;
         this.sol = sol;
+        this.operacion = operacion;
     }
-    public Ecuacion(String nombre, int x1, int x2){
+    public Ecuacion(String nombre, int x1, int x2, String operacion){
         this.name_restriccion = nombre;
         this.x1 = x1;
         this.x2 = x2;
+        this.operacion = operacion;
     }
     public String getName_restriccion() {
         return name_restriccion;
@@ -64,4 +66,12 @@ public class Ecuacion {
     public void setSol(int sol) {
         this.sol = sol;
     }     
+    
+    public void setOperacion(String operacion){
+        this.operacion = operacion;
+    }
+    
+    public String getOperacion(){
+        return operacion;
+    }
 }
