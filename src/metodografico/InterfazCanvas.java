@@ -6,7 +6,7 @@
 package metodografico;
 
 import java.util.ArrayList;
-import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,22 +21,342 @@ public class InterfazCanvas extends javax.swing.JFrame {
     }
     
     public void asignacionValores(){
-        int x1 = ic_ecuaciones.get(1).getX1();
-        int x2 = ic_ecuaciones.get(1).getX2();
-        label_fun_obj.setText("Max Z = " +x1+"x1 +" +x2+"x2");
+        int x1 = ic_ecuaciones.get(0).getX1();
+        int x2 = ic_ecuaciones.get(0).getX2();
+        String fun = ic_ecuaciones.get(0).getOperacion();
+        label_fun_obj.setText("Max Z = "+x1+"x1"+fun +x2+"x2");
+        int opcion = ic_ecuaciones.size();
+        switch(opcion){
+            case 2:
+                jLabel3.setText(ic_ecuaciones.get(1).getX1() +"x1"
+                        +ic_ecuaciones.get(1).getOperacion()
+                        +ic_ecuaciones.get(1).getX2()+"x2"
+                        +ic_ecuaciones.get(1).getEqual()
+                        +ic_ecuaciones.get(1).getSol()
+                );
+                jLabel4.setText(" ");
+                jLabel5.setText(" ");
+                jLabel6.setText(" ");
+                jLabel7.setText(" ");
+                break;
+            case 3:
+                jLabel3.setText(ic_ecuaciones.get(1).getX1() +"x1"
+                        +ic_ecuaciones.get(1).getOperacion()
+                        +ic_ecuaciones.get(1).getX2()+"x2"
+                        +ic_ecuaciones.get(1).getEqual()
+                        +ic_ecuaciones.get(1).getSol()
+                );
+                jLabel4.setText(ic_ecuaciones.get(2).getX1() +"x1"
+                        +ic_ecuaciones.get(2).getOperacion()
+                        +ic_ecuaciones.get(2).getX2()+"x2"
+                        +ic_ecuaciones.get(2).getEqual()
+                        +ic_ecuaciones.get(2).getSol()
+                );
+                jLabel5.setText(" ");
+                jLabel6.setText(" ");
+                jLabel7.setText(" ");
+                break;
+            case 4:
+                jLabel3.setText(ic_ecuaciones.get(1).getX1() +"x1"
+                        +ic_ecuaciones.get(1).getOperacion()
+                        +ic_ecuaciones.get(1).getX2()+"x2"
+                        +ic_ecuaciones.get(1).getEqual()
+                        +ic_ecuaciones.get(1).getSol()
+                );
+                jLabel4.setText(ic_ecuaciones.get(2).getX1() +"x1"
+                        +ic_ecuaciones.get(2).getOperacion()
+                        +ic_ecuaciones.get(2).getX2()+"x2"
+                        +ic_ecuaciones.get(2).getEqual()
+                        +ic_ecuaciones.get(2).getSol()
+                );
+                jLabel5.setText(ic_ecuaciones.get(3).getX1() +"x1"
+                        +ic_ecuaciones.get(3).getOperacion()
+                        +ic_ecuaciones.get(3).getX2()+"x2"
+                        +ic_ecuaciones.get(3).getEqual()
+                        +ic_ecuaciones.get(3).getSol()
+                );
+                jLabel6.setText(" ");
+                jLabel7.setText(" ");
+                break;
+            case 5:
+                jLabel3.setText(ic_ecuaciones.get(1).getX1() +"x1"
+                        +ic_ecuaciones.get(1).getOperacion()
+                        +ic_ecuaciones.get(1).getX2()+"x2"
+                        +ic_ecuaciones.get(1).getEqual()
+                        +ic_ecuaciones.get(1).getSol()
+                );
+                jLabel4.setText(ic_ecuaciones.get(2).getX1() +"x1"
+                        +ic_ecuaciones.get(2).getOperacion()
+                        +ic_ecuaciones.get(2).getX2()+"x2"
+                        +ic_ecuaciones.get(2).getEqual()
+                        +ic_ecuaciones.get(2).getSol()
+                );
+                jLabel5.setText(ic_ecuaciones.get(3).getX1() +"x1"
+                        +ic_ecuaciones.get(3).getOperacion()
+                        +ic_ecuaciones.get(3).getX2()+"x2"
+                        +ic_ecuaciones.get(3).getEqual()
+                        +ic_ecuaciones.get(3).getSol()
+                );
+                jLabel6.setText(ic_ecuaciones.get(4).getX1() +"x1"
+                        +ic_ecuaciones.get(4).getOperacion()
+                        +ic_ecuaciones.get(4).getX2()+"x2"
+                        +ic_ecuaciones.get(4).getEqual()
+                        +ic_ecuaciones.get(4).getSol()
+                );
+                jLabel7.setText(" ");
+                break;
+            case 6:
+                jLabel3.setText(ic_ecuaciones.get(1).getX1() +"x1"
+                        +ic_ecuaciones.get(1).getOperacion()
+                        +ic_ecuaciones.get(1).getX2()+"x2"
+                        +ic_ecuaciones.get(1).getEqual()
+                        +ic_ecuaciones.get(1).getSol()
+                );
+                jLabel4.setText(ic_ecuaciones.get(2).getX1() +"x1"
+                        +ic_ecuaciones.get(2).getOperacion()
+                        +ic_ecuaciones.get(2).getX2()+"x2"
+                        +ic_ecuaciones.get(2).getEqual()
+                        +ic_ecuaciones.get(2).getSol()
+                );
+                jLabel5.setText(ic_ecuaciones.get(3).getX1() +"x1"
+                        +ic_ecuaciones.get(3).getOperacion()
+                        +ic_ecuaciones.get(3).getX2()+"x2"
+                        +ic_ecuaciones.get(3).getEqual()
+                        +ic_ecuaciones.get(3).getSol()
+                );
+                jLabel6.setText(ic_ecuaciones.get(4).getX1() +"x1"
+                        +ic_ecuaciones.get(4).getOperacion()
+                        +ic_ecuaciones.get(4).getX2()+"x2"
+                        +ic_ecuaciones.get(4).getEqual()
+                        +ic_ecuaciones.get(4).getSol()
+                );
+                jLabel7.setText(ic_ecuaciones.get(5).getX1() +"x1"
+                        +ic_ecuaciones.get(5).getOperacion()
+                        +ic_ecuaciones.get(5).getX2()+"x2"
+                        +ic_ecuaciones.get(5).getEqual()
+                        +ic_ecuaciones.get(5).getSol()
+                );
+                break;
+            
+        }
     }
-    /**
-     * Creates new form InterfazCanvas
-     */
+    public void asignacionModeloTablas() {
+        int opcion = ic_ecuaciones.size();
+        String[] columnNames = {"X1", "X2"};
+        if(opcion == 2){        
+            jTable1.setVisible(true);
+            Object[][] model1 = {
+                {ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getX2()}
+            };
+            DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
+            jTable1.setModel(dtm);
+        } 
+        if(opcion == 3){
+            jTable1.setVisible(true);
+            jTable2.setVisible(true);
+            Object[][] model1 = {
+                {ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getX2()}
+            };
+            Object[][] model2 = {
+                {ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getX2()}
+            };
+            DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
+            DefaultTableModel dtm2= new DefaultTableModel(model2, columnNames);
+            jTable1.setModel(dtm);
+            jTable2.setModel(dtm2);
+        }
+        if(opcion == 4){
+            jTable1.setVisible(true);
+            jTable2.setVisible(true);
+            jTable3.setVisible(true);
+            Object[][] model1 = {
+                {ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getX2()}
+            };
+            Object[][] model2 = {
+                {ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getX2()}
+            };
+            Object[][] model3 = {
+                {ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getX2()}
+            };
+            DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
+            DefaultTableModel dtm2= new DefaultTableModel(model2, columnNames);
+            DefaultTableModel dtm3= new DefaultTableModel(model3, columnNames);
+            jTable1.setModel(dtm);
+            jTable2.setModel(dtm2);
+            jTable3.setModel(dtm3);
+        }    
+        if(opcion == 5){
+            jTable1.setVisible(true);
+            jTable2.setVisible(true);
+            jTable3.setVisible(true);
+            jTable4.setVisible(true);
+            Object[][] model1 = {
+                {ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getX2()}
+            };
+            Object[][] model2 = {
+                {ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getX2()}
+            };
+            Object[][] model3 = {
+                {ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getX2()}
+            };
+            Object[][] model4 = {
+                {ic_ecuaciones.get(4).getX1(), "0"},
+                {"0", ic_ecuaciones.get(4).getX2()}
+            };
+            DefaultTableModel dtm = new DefaultTableModel(model1, columnNames);
+            DefaultTableModel dtm2 = new DefaultTableModel(model2, columnNames);
+            DefaultTableModel dtm3 = new DefaultTableModel(model3, columnNames);
+            DefaultTableModel dtm4 = new DefaultTableModel(model4, columnNames);
+            jTable1.setModel(dtm);
+            jTable2.setModel(dtm2);
+            jTable3.setModel(dtm3);
+            jTable4.setModel(dtm4);
+        }
+        if(opcion == 6){
+            jTable1.setVisible(true);
+            jTable2.setVisible(true);
+            jTable3.setVisible(true);
+            jTable4.setVisible(true);
+            jTable5.setVisible(true);
+            Object[][] model1 = {
+                {ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getX2()}
+            };
+            Object[][] model2 = {
+                {ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getX2()}
+            };
+            Object[][] model3 = {
+                {ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getX2()}
+            };
+            Object[][] model4 = {
+                {ic_ecuaciones.get(4).getX1(), "0"},
+                {"0", ic_ecuaciones.get(4).getX2()}
+            };
+            Object[][] model5 = {
+                {ic_ecuaciones.get(5).getX1(), "0"},
+                {"0", ic_ecuaciones.get(5).getX2()}
+            };
+            DefaultTableModel dtm = new DefaultTableModel(model1, columnNames);
+            DefaultTableModel dtm2 = new DefaultTableModel(model2, columnNames);
+            DefaultTableModel dtm3 = new DefaultTableModel(model3, columnNames);
+            DefaultTableModel dtm4 = new DefaultTableModel(model4, columnNames);
+            DefaultTableModel dtm5 = new DefaultTableModel(model5, columnNames);
+            jTable1.setModel(dtm);
+            jTable2.setModel(dtm2);
+            jTable3.setModel(dtm3);
+            jTable4.setModel(dtm4);
+            jTable5.setModel(dtm5);
+        }
+    }
+    
+    public void evaluacionFuncionObjetico(){
+        int opcion = ic_ecuaciones.size();
+        int fo_x1 = ic_ecuaciones.get(0).getX1();
+        int fo_x2 = ic_ecuaciones.get(0).getX2();
+        int f1_x1 = ic_ecuaciones.get(1).getX1();
+        int f1_x2 = ic_ecuaciones.get(1).getX2();
+        String fo_signo = ic_ecuaciones.get(0).getOperacion();
+        int f2_x1, f2_x2, f3_x1, f3_x2, f4_x1, f4_x2, f5_x1, f5_x2;
+        switch(opcion){
+            case 2:
+                jLabel13.setText(fo_x1+"("+f1_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f1_x1);
+                jLabel14.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f1_x2 +") = "+fo_x2*f1_x2);
+                break;
+            case 3:
+                f2_x1 = ic_ecuaciones.get(2).getX1();
+                f2_x2 = ic_ecuaciones.get(2).getX2();
+                
+                jLabel13.setText(fo_x1+"("+f1_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f1_x1);
+                jLabel14.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f1_x2 +") = "+fo_x2*f1_x2);
+                // Etiquetas para la fila 2
+                jLabel15.setText(fo_x1+"("+f2_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f2_x1);
+                jLabel16.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f2_x2 +") = "+fo_x2*f2_x2);
+                break;
+            case 4:
+                f2_x1 = ic_ecuaciones.get(2).getX1();
+                f2_x2 = ic_ecuaciones.get(2).getX2();
+                f3_x1 = ic_ecuaciones.get(3).getX1();
+                f3_x2 = ic_ecuaciones.get(3).getX2();
+                
+                jLabel13.setText(fo_x1+"("+f1_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f1_x1);
+                jLabel14.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f1_x2 +") = "+fo_x2*f1_x2);
+                // Etiquetas para la fila 2
+                jLabel15.setText(fo_x1+"("+f2_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f2_x1);
+                jLabel16.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f2_x2 +") = "+fo_x2*f2_x2);
+                // Etiquetas para la fila 3
+                jLabel17.setText(fo_x1+"("+f3_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f3_x1);
+                jLabel18.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f3_x2 +") = "+fo_x2*f3_x2);
+                break;
+            case 5:
+                f2_x1 = ic_ecuaciones.get(2).getX1();
+                f2_x2 = ic_ecuaciones.get(2).getX2();
+                f3_x1 = ic_ecuaciones.get(3).getX1();
+                f3_x2 = ic_ecuaciones.get(3).getX2();
+                f4_x1 = ic_ecuaciones.get(4).getX1();
+                f4_x2 = ic_ecuaciones.get(4).getX2();
+                
+                jLabel13.setText(fo_x1+"("+f1_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f1_x1);
+                jLabel14.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f1_x2 +") = "+fo_x2*f1_x2);
+                // Etiquetas para la fila 2
+                jLabel15.setText(fo_x1+"("+f2_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f2_x1);
+                jLabel16.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f2_x2 +") = "+fo_x2*f2_x2);
+                // Etiquetas para la fila 3
+                jLabel17.setText(fo_x1+"("+f3_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f3_x1);
+                jLabel18.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f3_x2 +") = "+fo_x2*f3_x2);
+                // Etiquetas para la fila 4
+                jLabel19.setText(fo_x1+"("+f4_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f4_x1);
+                jLabel20.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f4_x2 +") = "+fo_x2*f4_x2);
+                break;
+            case 6:
+                f2_x1 = ic_ecuaciones.get(2).getX1();
+                f2_x2 = ic_ecuaciones.get(2).getX2();
+                f3_x1 = ic_ecuaciones.get(3).getX1();
+                f3_x2 = ic_ecuaciones.get(3).getX2();
+                f4_x1 = ic_ecuaciones.get(4).getX1();
+                f4_x2 = ic_ecuaciones.get(4).getX2();
+                f5_x1 = ic_ecuaciones.get(5).getX1();
+                f5_x2 = ic_ecuaciones.get(5).getX2();
+                
+                jLabel13.setText(fo_x1+"("+f1_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f1_x1);
+                jLabel14.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f1_x2 +") = "+fo_x2*f1_x2);
+                // Etiquetas para la fila 2
+                jLabel15.setText(fo_x1+"("+f2_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f2_x1);
+                jLabel16.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f2_x2 +") = "+fo_x2*f2_x2);
+                // Etiquetas para la fila 3
+                jLabel17.setText(fo_x1+"("+f3_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f3_x1);
+                jLabel18.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f3_x2 +") = "+fo_x2*f3_x2);
+                // Etiquetas para la fila 4
+                jLabel19.setText(fo_x1+"("+f4_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f4_x1);
+                jLabel20.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f4_x2 +") = "+fo_x2*f4_x2);
+                // Etiquetas para la fila 5
+                jLabel21.setText(fo_x1+"("+f5_x1+")"+fo_signo+fo_x2+"(0) = "+fo_x1*f5_x1);
+                jLabel22.setText(fo_x1+"(0)"+fo_signo+fo_x2+"("+f5_x2 +") = "+fo_x2*f5_x2);
+                break;
+                
+        }
+    }
     public InterfazCanvas() {
-        initComponents();      
+        initComponents();
+        jPanel1.setVisible(false);
+        jPanel2.setVisible(false);
+        
+        jTable2.setVisible(false);
+        jTable3.setVisible(false);
+        jTable4.setVisible(false);
+        jTable5.setVisible(false);
     }
 
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -68,6 +388,16 @@ public class InterfazCanvas extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -282,15 +612,40 @@ public class InterfazCanvas extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)))
                     .addComponent(jLabel8)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)))
                     .addComponent(jLabel9)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18)))
                     .addComponent(jLabel10)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)))
                     .addComponent(jLabel11)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel22)))
                     .addComponent(jLabel12))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -300,23 +655,48 @@ public class InterfazCanvas extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel14)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel16)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel18)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel20)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel22)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -325,22 +705,19 @@ public class InterfazCanvas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(label_fun_obj)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(label_fun_obj)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1)))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(101, 101, 101)
@@ -371,36 +748,15 @@ public class InterfazCanvas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         asignacionValores();
         new Ventana();
         jButton1.setVisible(false);
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(true); 
+        asignacionModeloTablas();
+        evaluacionFuncionObjetico();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazCanvas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        
-        //</editor-fold>
-
-        /* Create and display the form */
+public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -415,7 +771,17 @@ public class InterfazCanvas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -438,5 +804,4 @@ public class InterfazCanvas extends javax.swing.JFrame {
     private javax.swing.JTable jTable5;
     private javax.swing.JLabel label_fun_obj;
     // End of variables declaration//GEN-END:variables
-  
 }
