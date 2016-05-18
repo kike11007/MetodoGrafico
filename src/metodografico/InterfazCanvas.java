@@ -20,6 +20,10 @@ public class InterfazCanvas extends javax.swing.JFrame {
         ic_ecuaciones = ecuaciones;
     }
     
+    /**
+     * Presentación de los datos con respecto a cada caso
+     * muestra la informacion en la etiqueta
+     */
     public void asignacionValores(){
         int x1 = ic_ecuaciones.get(0).getX1();
         int x2 = ic_ecuaciones.get(0).getX2();
@@ -140,14 +144,15 @@ public class InterfazCanvas extends javax.swing.JFrame {
             
         }
     }
+    
     public void asignacionModeloTablas() {
         int opcion = ic_ecuaciones.size();
         String[] columnNames = {"X1", "X2"};
         if(opcion == 2){        
             jTable1.setVisible(true);
             Object[][] model1 = {
-                {ic_ecuaciones.get(1).getX1(), "0"},
-                {"0", ic_ecuaciones.get(1).getX2()}
+                {ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX2()}
             };
             DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
             jTable1.setModel(dtm);
@@ -156,12 +161,12 @@ public class InterfazCanvas extends javax.swing.JFrame {
             jTable1.setVisible(true);
             jTable2.setVisible(true);
             Object[][] model1 = {
-                {ic_ecuaciones.get(1).getX1(), "0"},
-                {"0", ic_ecuaciones.get(1).getX2()}
+                {ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX2()}
             };
             Object[][] model2 = {
-                {ic_ecuaciones.get(2).getX1(), "0"},
-                {"0", ic_ecuaciones.get(2).getX2()}
+                {ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX2()}
             };
             DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
             DefaultTableModel dtm2= new DefaultTableModel(model2, columnNames);
@@ -173,16 +178,16 @@ public class InterfazCanvas extends javax.swing.JFrame {
             jTable2.setVisible(true);
             jTable3.setVisible(true);
             Object[][] model1 = {
-                {ic_ecuaciones.get(1).getX1(), "0"},
-                {"0", ic_ecuaciones.get(1).getX2()}
+                {ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX2()}
             };
             Object[][] model2 = {
-                {ic_ecuaciones.get(2).getX1(), "0"},
-                {"0", ic_ecuaciones.get(2).getX2()}
+                {ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX2()}
             };
             Object[][] model3 = {
-                {ic_ecuaciones.get(3).getX1(), "0"},
-                {"0", ic_ecuaciones.get(3).getX2()}
+                {ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX2()}
             };
             DefaultTableModel dtm= new DefaultTableModel(model1, columnNames);
             DefaultTableModel dtm2= new DefaultTableModel(model2, columnNames);
@@ -197,20 +202,20 @@ public class InterfazCanvas extends javax.swing.JFrame {
             jTable3.setVisible(true);
             jTable4.setVisible(true);
             Object[][] model1 = {
-                {ic_ecuaciones.get(1).getX1(), "0"},
-                {"0", ic_ecuaciones.get(1).getX2()}
+                {ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX2()}
             };
             Object[][] model2 = {
-                {ic_ecuaciones.get(2).getX1(), "0"},
-                {"0", ic_ecuaciones.get(2).getX2()}
+                {ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX2()}
             };
             Object[][] model3 = {
-                {ic_ecuaciones.get(3).getX1(), "0"},
-                {"0", ic_ecuaciones.get(3).getX2()}
+                {ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX2()}
             };
             Object[][] model4 = {
-                {ic_ecuaciones.get(4).getX1(), "0"},
-                {"0", ic_ecuaciones.get(4).getX2()}
+                {ic_ecuaciones.get(4).getSol()/ic_ecuaciones.get(4).getX1(), "0"},
+                {"0", ic_ecuaciones.get(4).getSol()/ic_ecuaciones.get(4).getX2()}
             };
             DefaultTableModel dtm = new DefaultTableModel(model1, columnNames);
             DefaultTableModel dtm2 = new DefaultTableModel(model2, columnNames);
@@ -228,24 +233,24 @@ public class InterfazCanvas extends javax.swing.JFrame {
             jTable4.setVisible(true);
             jTable5.setVisible(true);
             Object[][] model1 = {
-                {ic_ecuaciones.get(1).getX1(), "0"},
-                {"0", ic_ecuaciones.get(1).getX2()}
+                {ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX1(), "0"},
+                {"0", ic_ecuaciones.get(1).getSol()/ic_ecuaciones.get(1).getX2()}
             };
             Object[][] model2 = {
-                {ic_ecuaciones.get(2).getX1(), "0"},
-                {"0", ic_ecuaciones.get(2).getX2()}
+                {ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX1(), "0"},
+                {"0", ic_ecuaciones.get(2).getSol()/ic_ecuaciones.get(2).getX2()}
             };
             Object[][] model3 = {
-                {ic_ecuaciones.get(3).getX1(), "0"},
-                {"0", ic_ecuaciones.get(3).getX2()}
+                {ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX1(), "0"},
+                {"0", ic_ecuaciones.get(3).getSol()/ic_ecuaciones.get(3).getX2()}
             };
             Object[][] model4 = {
-                {ic_ecuaciones.get(4).getX1(), "0"},
-                {"0", ic_ecuaciones.get(4).getX2()}
+                {ic_ecuaciones.get(4).getSol()/ic_ecuaciones.get(4).getX1(), "0"},
+                {"0", ic_ecuaciones.get(4).getSol()/ic_ecuaciones.get(4).getX2()}
             };
             Object[][] model5 = {
-                {ic_ecuaciones.get(5).getX1(), "0"},
-                {"0", ic_ecuaciones.get(5).getX2()}
+                {ic_ecuaciones.get(5).getSol()/ic_ecuaciones.get(5).getX1(), "0"},
+                {"0", ic_ecuaciones.get(5).getSol()/ic_ecuaciones.get(5).getX2()}
             };
             DefaultTableModel dtm = new DefaultTableModel(model1, columnNames);
             DefaultTableModel dtm2 = new DefaultTableModel(model2, columnNames);
