@@ -16,7 +16,7 @@ import java.awt.Graphics;
 public class Grafica extends Canvas {
     
     public Grafica(){
-        setBackground(Color.WHITE);
+        this.setBackground(Color.WHITE);
     }
     
    @Override 
@@ -28,4 +28,30 @@ public class Grafica extends Canvas {
         // eje Y
         g.drawLine(250, 0, 250, 500);
    }
+   
+   public void pintarLinea(Graphics g, String color, float x1, float x2, float y1, float y2){
+       g.setColor(asignarColor(color));
+       g.drawLine(WIDTH, WIDTH, WIDTH, WIDTH);
+   }
+
+    private Color asignarColor(String color) {
+        
+        if(color.equals("azul")){
+            return Color.BLUE;    
+        }
+        if(color.equals("verde")){
+            return Color.GREEN;
+        }
+        if(color.equals("morado")){
+            return Color.magenta;
+        }
+        if(color.equals("negro")){
+            return Color.BLACK;
+        }else{
+            return Color.ORANGE;
+        }
+    }
+   
+   
+      
 }

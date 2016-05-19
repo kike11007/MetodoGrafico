@@ -13,9 +13,11 @@ import javax.swing.JFrame;
  */
 public class Ventana extends JFrame{
     public Ventana(){
+        this.setLocation(401, 0);
         this.setSize(500,500);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.add(new Grafica());
+        Grafica g = new Grafica();
+        this.add(g);
         this.setVisible(true);
     }
     
